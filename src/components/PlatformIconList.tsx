@@ -35,7 +35,7 @@ const PlatformIconList = ({ platforms }: Props) => {
           // this colour is from chakra
           return (
             <Icon
-              key={platform.slug}
+              key={platform.id}
               color="gray.500"
               as={iconMap[platform.slug]}
             />
