@@ -27,7 +27,10 @@ function App() {
       <GridItem area="aside" paddingX={5}>
         <Show above="lg">
           {/* this is where the onSelectGenre callback is defined. The update of state triggers a re-render*/}
-          <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />{" "}
+          <GenreList
+            onSelectGenre={(genre) => setSelectedGenre(genre)}
+            selectedGenre={selectedGenre}
+          />{" "}
         </Show>
       </GridItem>
       <GridItem area="main">
