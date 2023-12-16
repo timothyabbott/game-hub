@@ -1,8 +1,9 @@
+import react from "../assets/react.svg";
+
 const getCroppedImageUrl = (url: string) => {
   const target = "media/";
-  //   find the position at which to add the crop string
-  // It was found that not all images have a cropped image, this is a short term fix while completing the sort selector.
-  if (!url) return "";
+  // Display the react image if no url is returned
+  if (!url) return react;
   const index = url.indexOf(target) + target.length;
 
   return url.slice(0, index) + "crop/600/400/" + url.slice(index);
