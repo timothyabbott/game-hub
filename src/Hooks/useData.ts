@@ -39,7 +39,7 @@ const useData = <T>(
     // means if we have deps spread them, =otherwise use an empty array
     deps ? [...deps] : []
   );
-
+  console.log(data);
   return { data, error, isLoading };
 };
 
