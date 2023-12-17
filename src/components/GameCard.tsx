@@ -13,8 +13,7 @@ const GameCard = ({ game }: Props) => {
     <Card borderRadius={10} overflow={"hidden"}>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize={"2xl"}>{game.name}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList
             // we need to do this strange platform mapping because parent_platforms
             // has a list of platforms which in turn has a platform property which is a list of platforms
@@ -25,6 +24,7 @@ const GameCard = ({ game }: Props) => {
           ></PlatformIconList>
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
+        <Heading fontSize={"2xl"}>{game.name}</Heading>
       </CardBody>
     </Card>
   );
